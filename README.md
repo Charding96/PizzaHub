@@ -12,5 +12,5 @@ The application also has the capability of representing both summary and detaile
 In this management system, we will provide web application used by the customer to order pizza. user can give feedback after got their order. 
 This information will be evaluate and take into consideration.  
 
-Languages: HTML, CSS, Javascript
-Authors: Charlie, Jacob, Elie
+- Languages: HTML, CSS, Javascript
+- Authors: Charlie, Jacob, Elie
