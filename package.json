@@ -1,13 +1,15 @@
 {
-  "name": "backend-starter-code",
+  "name": "PizzaHub",
   "version": "1.0.0",
-  "description": "Starter code for an Express/Sequelize backend.",
+  "description": "The 'PizzaHub' is a web application which helps people to find the closest pizza store based"  
+                  "on the user’s current position and other specification like price, registered customer," 
+                  "rating and more. ",
   "main": "app.js",
   "scripts": {
     "start": "nodemon -L app.js",
     "test": "jest"
   },
-  "author": "Edgardo Molina",
+  "author": "Charlie, Jacob, Elie",
   "license": "ISC",
   "devDependencies": {
     "jest": "^21.2.1"
