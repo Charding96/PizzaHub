@@ -1,0 +1,26 @@
+{
+  "name": "PizzaHub",
+  "version": "1.0.0",
+  "description": "The 'PizzaHub' is a web application which helps people to find the closest pizza store based"  
+                  "on the user’s current position and other specification like price, registered customer," 
+                  "rating and more. ",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon -L app.js",
+    "test": "jest"
+  },
+  "author": "Charlie, Jacob, Elie",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "express-handlebars": "^3.0.0",
+    "nodemon": "^1.12.1",
+    "pg": "^7.3.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.13.3"
+  }
+}
