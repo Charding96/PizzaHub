@@ -1,9 +1,7 @@
 {
   "name": "PizzaHub",
   "version": "1.0.0",
-  "description": "The 'PizzaHub' is a web application which helps people to find the closest pizza store based"  
-                  "on the user’s current position and other specification like price, registered customer," 
-                  "rating and more. ",
+  "description": "The 'PizzaHub' is a web application which helps people to find the closest pizza store based on the user’s current position and other specification like price, registered customer,rating and more.",
   "main": "app.js",
   "scripts": {
     "start": "nodemon -L app.js",
