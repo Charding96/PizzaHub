@@ -1,0 +1,16 @@
+body, html {
+  height: 100%;
+  font-family: 'Monda', sans-serif;
+}
+
+
+
+
+
+.nav li a {
+  color: black;
+  font-weight: bold;
+  
+  font-size: 1em;
+}
+

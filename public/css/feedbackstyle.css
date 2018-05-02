@@ -3,7 +3,6 @@
 body { background-image:url(https://images.unsplash.com/photo-1516697073-419b2bd079db?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7bb5857bafd3ee3e7c22a5ddc9f0264f&auto=format&fit=crop&w=2602&q=80);
     background-repeat:no-repeat;
     background-size:cover;
-    background-position: top;
       
       }
 form { max-width:420px; margin:50px auto; }
