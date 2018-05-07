@@ -1,0 +1,270 @@
+
+
+       <link rel="stylesheet" href="/css/pizzaorderstyle.css"> 
+
+  <div class="container-fluid">   
+  <div class="row">
+    <div class="col-md-4 col-sm-4 ">
+		 <h1>PizzaHub</h1>
+      <form class="order-form" action="/pizza-order" method="post">
+		  
+        <h2>Size</h2>
+        <div class="radio" id="size">
+          <div>
+          <label>
+                <input type="radio" name="size" value="7" checked>
+                Small ($7)
+              </label>
+          </div>
+        <div class="radio">
+          <label>
+                <input type="radio" name="size" value="9">
+                Medium ($9)
+              </label>
+        </div>
+        <div class="radio">
+          <label>
+                <input type="radio" name="size" value="11">
+                Large ($11)
+              </label>
+        </div>
+      </div>
+		  
+        <h2>Crust</h2>
+        <div class="radio" id="crust">
+          <div>
+          <label>
+                <input type="radio" name="crust" value="0" checked>
+                White
+              </label>
+        </div>
+        <div class="radio">
+          <label>
+                <input type="radio" name="crust" value="0">
+                Wheat
+              </label>
+        </div>
+        <div class="radio">
+          <label>
+                <input type="radio" name="crust" value="0">
+                Gluten-Free
+              </label>
+        </div>
+      </div>
+        <h2>Sauce</h2>
+        <div class="radio" id="sauce">
+          <div>
+          <label>
+                <input type="radio" name="sauce" value="0" checked>
+                Tomato Sauce
+              </label>
+        <div class="radio">
+          <label>
+                <input type="radio" name="sauce" value="0">
+                BBQ
+              </label>
+        </div>
+      </div>
+        <div class="radio">
+          <label>
+                <input type="radio" name="sauce" value="1.50">
+                Creamy Cream (+$1.50)
+              </label>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <h2>Toppings ($0.75 each)</h2>
+      <div class="checkbox" id="toppings">
+        <div>
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Sausage
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Pepperoni
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Bacon
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Salami
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Ham
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Chicken
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Feta Cheese
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Soy Cheese
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Banana Peppers
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Jalapeño Peppers
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Onion
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Olives
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="toppings" value=".75">
+              Pineapple
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox"  name="toppings" value=".75">
+              Mushrooms
+            </label>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <h2>Options</h2>
+      <div class="checkbox" id="options">
+         <div>
+        <label>
+              <input type="checkbox" name="options" value="1">
+              Extra Cheese (+$1.00 extra)
+            </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" name="options" value="1">
+              Add bread sticks to order. (+$1.00 extra)
+            </label>
+          </div>
+      </div>
+
+
+
+
+      <h3>Delivery or Pick a Cook</h3>
+      <div class="form-group d-print-block">
+        <select class="form-control">
+              <option value="0" selected disabled>Delivery or Pickup a Cook</option>
+              <option value="0" >Delivery</option>
+              <option value="0">Pick a Cook</option>
+            </select>
+      </div>
+      <!-- <div id="deliveryOptions"> -->
+        <div class="form-group">
+          <label for="street">Street</label>
+          <input type="tel" class="form-control" id="street" placeholder="5615 Vistancia Drive">
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="tel" class="form-control" id="city" placeholder="Parker">
+        </div>
+        <div class="form-group">
+          <label for="zip">Zip</label>
+          <input type="number" class="form-control" id="zip" placeholder="80134">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" rows="3" placeholder="Gate code is..." id="message"></textarea>
+        </div>
+      <!-- </div> -->
+      <div class="form-group">
+        <label for="tel">Tel</label>
+        <input type="tel" class="form-control" id="tel" placeholder="303-565-0001">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="tommy.gaessler@gmail.com">
+      </div>
+
+
+
+
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" value=".15" id="tip">
+              Suggested Tip 15%
+            </label>
+      </div>
+    </div>
+    <button class="btn btn-default btn-block" type="submit">Order</button>
+    </form>
+  </div>
+  {{#if ordered}}
+  <div class="row" id="results">
+    <div class="col-md-4 col-sm-4 justify-content-start">
+      <h3>Charge</h3>
+      <h4 id="subtotal"> {{subtotal}}</h4>
+      <h4 id="tax"> {{tax}} </h4>
+      <h4 id="tipResult"> {{tip}} </h4>
+      <h4 id="deliveryResult"> {{delivery}}</h4>
+      <h4 id="total"> {{total}}</h4>
+    </div>
+
+    <div class="col-md-4 col-sm-4 justify-content-center">
+      <h3>Information</h3>
+      <h4 id="streetResult">{{street}}</h4>
+      <h4 id="cityResult">{{city}}</h4>
+      <h4 id="zipResult">{{zip}}</h4>
+      <h4 id="messageResult">{{message}}</h4>
+      <h4 id="telResult">{{tel}}</h4>
+      <h4 id="emailResult">{{email}}</h4>
+    </div>
+    <div class="col-md-4 col-sm-4 justify-content-end">
+      <h3>Order</h3>
+      <div id="order">
+        
+      </div>
+    </div>
+  </div>
+  {{/if}}
+</div>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+  
+
+ <!--   <script  src="/js/pizzaorder.js"></script>
+ -->
+
+
+
