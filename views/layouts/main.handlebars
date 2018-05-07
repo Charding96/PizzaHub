@@ -4,7 +4,7 @@
 
 	 <title>Pizza</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <!-- Bootstrap Js CDN -->
     <link href="/css/style.css" rel="stylesheet">
@@ -14,51 +14,31 @@
 
 </head>
 <body>
-
-	<div class="container-fluid">
-   <div class="row">
-      <div class="col-md-12">
-         <nav class="navbar navbar-default" role="navigation" id="myNavbar">
-            <div class="navbar-header">
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-               <span class="sr-only">Toggle navigation</span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand" href="/"><em>PizzaHub</em></a>
-            </div>
-             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                    <li><a href="/about-us">About Us</a></li>
-                  </ul>
-                   {{#if cur_user}}
-                  <ul class="nav navbar-nav">
-                      <li id="Order"><a href="/Orders">Pizza Order</a></li>
-                     
-                  </ul>
-                  <form class="navbar-form navbar-left" role="search">
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                      </div>
-                      <button type="submit" class="btn btn-default">
-                        <i class="glyphicon glyphicon-search"></i>
-                      </button>
-                  </form>
-                  {{/if}}
-                  <ul class="nav navbar-nav navbar-right">
-                    {{#if cur_user}}
-                      <li id="username"><a href="/profile">{{cur_user.username}}</a></li>
-                      <li id="logout"><a href="/logout">Logout</a></li>
-                    {{ else }}
-                      <li><a href="/sign-up">Sign Up</a></li>
-                      <li><a href="/login">Login</a></li>
-                    {{/if}}
-                  </ul>
-                </div>
-         </nav>
+<div class="header">
+     <nav class="navbar navbar-expand-lg bg-info" role="navigation">
+      <div class="navbar-left">
+        <ul class="navbar-nav justify-content-start">
+          <li class="nav-item nav-link"><a class="text-white font-weight-bold" href="/"> HOME </a></li>
+          <li class="nav-item nav-link"><a class="text-white font-weight-bold" href="/feedback">FEEDBACK</a></li>
+          <li class="nav-item nav-link"><a class="text-white font-weight-bold" href="/aboutus">ABOUT US</a></li>
+        </ul>
       </div>
-    </div> 
+
+      <div class="navbar-right ">
+        <ul class="navbar-nav ml-5 justify-content-end">
+          {{#if cur_user}}
+            <li class="nav-item nav-link"> <a class="text-white font-weight-bold" href="/logout"> LOGOUT </a></li>
+          {{ else }}
+            <li class="nav-item nav-link"> <a class="text-white font-weight-bold" href="/login-signup"> LOGIN OR SIGNUP </a></li>
+          {{/if}}
+          {{#if ordered}}
+           <button type="submit" class="btn btn-success" > <a href="/order-confirmation"> Continue </a> </button>
+           {{/if}}
+        </ul>
+      </div>
+
+    </nav>
+</div>
 
 	
 <div class="body">
@@ -66,17 +46,6 @@
 </div>
 
 
- {{#if cur_user}}
-  <script>
-    (function() {
-      $('#logout').click(function() {
-        $.post("/logout", function() {
-          window.location.href = '/';
-        });
-      });
-    })();
-  </script>
-  {{/if}}
 
 
 </body>

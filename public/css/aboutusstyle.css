@@ -1,0 +1,32 @@
+body{
+    background-color:whitesmoke;
+    font-family: "Roboto", sans-serif;
+	font-weight: lighter;
+	background-image:url("https://images.unsplash.com/photo-1516697073-419b2bd079db?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7bb5857bafd3ee3e7c22a5ddc9f0264f&auto=format&fit=crop&w=802&q=80");
+	background-position: center;
+	background-size: cover;
+	
+}
+
+
+
+
+
+#main {
+  margin: 0 auto;
+  padding: 0px;
+  text-align:left;
+  width: 700px;
+  height: 550px;
+  
+}
+
+p {	
+  background-color: rgba(255, 255, 255,0.4);
+  color: black;
+  font-size: 26px;
+  line-height: 48px;
+  margin-top: 100px;
+  padding: 10px 20px;
+     
+}
