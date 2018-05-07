@@ -1,0 +1,61 @@
+
+body {
+  margin: 0;
+}
+
+.hero {
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transform: translate3d(0,0,0);
+  height: 100vh;
+}
+
+h3{
+    color: white;
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__content {
+  z-index: 101;
+  position: relative;
+}
+
+@-webkit-keyframes slide {
+  0%   { background-position: left; }
+  50%   { background-position: right; }
+  100% { background-position: left; }
+}
+
+.hero h1 {
+  font-size: 50px;
+  font-weight: 100;
+  color: white;
+  margin: 0;
+
+}
+
+.hero__content {
+    padding: 10px;
+
+}
+
+
+.hero__content #map {
+    width: 100%;
+    height: 100%;
+}
+
+/*
+
+#map {
+     height: 600px;
+     width: 1px;
+}
+*/
