@@ -51,14 +51,14 @@ module.exports = (sequelize, DataTypes) => {
 			validate: {
 				notEmpty: true
 			}
-		}
+		},
 		ratings: {
       		type: DataTypes.ARRAY(DataTypes.REAL)
     	}
 	})
 
 	Customers.associate = (models) => {
-		models.Customers.belongsToMany(models.Stores);
+		models.Customers.belongsToMany(models.Stores, {through: models.RegisteredCustomers});
 	}
 
 
