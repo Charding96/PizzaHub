@@ -13,5 +13,4 @@ router.use('/order-confirmation', require('./order-confirmation'));
 router.use('/map', require('./map'));
 router.use('/manager', require('./manager'));
 router.use('/driver', require('./driver'));
-
 module.exports = router;

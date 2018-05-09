@@ -4,7 +4,9 @@ const models = require('../models');
 const router = express.Router();
 
 router.get('/', (req, res) => {
- res.render('cook');
+    models.Pizzas.findAll({}).then((orders) => {
+        res.render('cook',{orders});
+    })
 });
 
 router.post('/', (req, res) => {
