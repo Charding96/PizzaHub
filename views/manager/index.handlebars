@@ -35,7 +35,7 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Manage <b>Employees</b></h2>
+						<h2>Manage <b>Customer Registration</b></h2>
 					</div>
 					<div class="col-sm-6">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Register Customers</span></a>
@@ -56,7 +56,7 @@
                         <th>Name</th>
                         <th>Email</th>
 						<th>Average Rating</th>
-                        <th>Phone</th>
+                        <th>Created At</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -68,10 +68,10 @@
 								<label for="checkbox1"></label>
 							</span>
 						</td>
-                        <td>Thomas Hardy</td>
-                        <td>thomashardy@mail.com</td>
+                        <td>{{customers.0.firstName}} {{customers.0.lastName}}</td>
+                        <td>{{customers.0.email}}</td>
 						<td>3.7/5 Stars</td>
-                        <td>(171) 555-2222</td>
+                        <td>{{customers.0.createdAt}}</td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -84,10 +84,10 @@
 								<label for="checkbox2"></label>
 							</span>
 						</td>
-                        <td>Dominique Perrier</td>
-                        <td>dominiqueperrier@mail.com</td>
-						<td>4.2/5 Stars</td>
-                        <td>(313) 555-5735</td>
+                        <td>{{customers.1.firstName}} {{customers.1.lastName}}</td>
+                        <td>{{customers.1.email}}</td>
+						<td>3.7/5 Stars</td>
+                        <td>{{customers.1.createdAt}}</td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -100,10 +100,10 @@
 								<label for="checkbox3"></label>
 							</span>
 						</td>
-                        <td>Maria Anders</td>
-                        <td>mariaanders@mail.com</td>
-						<td>3.3/5 Stars</td>
-                        <td>(503) 555-9931</td>
+                        <td>{{customers.2.firstName}} {{customers.2.lastName}}</td>
+                        <td>{{customers.2.email}}</td>
+						<td>3.7/5 Stars</td>
+                        <td>{{customers.2.createdAt}}</td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -116,10 +116,10 @@
 								<label for="checkbox4"></label>
 							</span>
 						</td>
-                        <td>Fran Wilson</td>
-                        <td>franwilson@mail.com</td>
-						<td>4.6/5 Stars</td>
-                        <td>(204) 619-5731</td>
+                        <td>{{customers.3.firstName}} {{customers.3.lastName}}</td>
+                        <td>{{customers.3.email}}</td>
+						<td>3.7/5 Stars</td>
+                        <td>{{customers.3.createdAt}}</td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -132,10 +132,10 @@
 								<label for="checkbox5"></label>
 							</span>
 						</td>
-                        <td>Martin Blank</td>
-                        <td>martinblank@mail.com</td>
-						<td>3.3/5 Stars</td>
-                        <td>(480) 631-2097</td>
+                        <td>{{customers.4.firstName}} {{customers.4.lastName}}</td>
+                        <td>{{customers.4.email}}</td>
+						<td>3.7/5 Stars</td>
+                        <td>{{customers.4.createdAt}}</td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Accept">&#xE876;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>

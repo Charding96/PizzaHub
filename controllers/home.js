@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 router.get('/', (req, res) => {
- res.render('homepage');
+ res.render('homepagenew');
 });
 
 router.post('/', (req, res) => {
