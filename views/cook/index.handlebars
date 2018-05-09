@@ -14,7 +14,7 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Pizza<b> Cook Homepage</b></h2>
+						<h2>Pizza<b> Orders</b></h2>
 					</div>
 
                 </div>
@@ -24,19 +24,19 @@
                     <tr>
 
                         <th>Customer</th>
-                        <th>Pizza Order</th>
-						<th>Address</th>
-                        <th>Phone</th>
+                        <th>Pizza</th>
+						<th>Toppings</th>
+                        <th>Created At</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
 
-                        <td>Thomas Hardy</td>
-                        <td>Large Size, Wheat Crust, Tomoato Sauce, Banana Pepper, Onion, Mushroom, Extra Cheese(+$1.00 extra) </td>
-						<td>89 Chiaroscuro Rd, Brooklyn, NY</td>
-                        <td>(171) 555-2222</td>
+                        <td>{{orders.0.name}}</td>
+                        <td>{{orders.0.size}}, {{orders.0.crust}}, {{orders.0.sauce}}</td>
+                        <td>{{#each orders.0.toppings}}<li>{{this}}</li>{{/each}}</td>
+						<td>{{orders.0.createdAt}}</td>
 
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
@@ -46,10 +46,10 @@
 
                     <tr>
 
-                        <td>Dominique Perrier</td>
-                        <td>Small Crust, White Crust, Saugage, Feta Cheese, Mushroom, Olives </td>
-						<td>459 Prince st, New York, NY</td>
-                        <td>(313) 555-5735</td>
+                        <td>{{orders.1.name}}</td>
+                        <td>{{orders.1.size}}, {{orders.1.crust}}, {{orders.1.sauce}}</td>
+                        <td>{{#each orders.1.toppings}}<li>{{this}}</li>{{/each}}</td>
+						<td>{{orders.1.createdAt}}</td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -57,10 +57,10 @@
                     </tr>
 					<tr>
 
-                        <td>Maria Anders</td>
-                        <td>Large Size, White Curst, Tomoato Sauce, Pepperoni, Ham, Feta Cheese</td>
-						<td>25, Queen Boulenvort, Queen, NY</td>
-                        <td>(503) 555-9931</td>
+                        <td>{{orders.2.name}}</td>
+                        <td>{{orders.2.size}}, {{orders.2.crust}}, {{orders.2.sauce}}</td>
+                        <td>{{#each orders.2.toppings}}<li>{{this}}</li>{{/each}}</td>
+						<td>{{orders.2.createdAt}}</td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -68,10 +68,10 @@
                     </tr>
                     <tr>
 
-                        <td>Fran Wilson</td>
-                        <td>Small Size, Glueten-Free,     </td>
-						<td>C/ Araquil, 67, Madrid, Spain</td>
-                        <td>(204) 619-5731</td>
+                        <td>{{orders.3.name}}</td>
+                        <td>{{orders.3.size}}, {{orders.3.crust}}, {{orders.3.sauce}}</td>
+                        <td>{{#each orders.3.toppings}}<li>{{this}}</li>{{/each}}</td>
+						<td>{{orders.3.createdAt}}</td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -79,10 +79,10 @@
                     </tr>					
 					<tr>
 
-                        <td>Martin Blank</td>
-                        <td>Large Size, White Curst, Tomoato Sauce, Pepperoni, </td>
-						<td>321 Gay St.Astria, Queen, NY</td>
-                        <td>(480) 631-2097</td>
+                        <td>{{orders.4.name}}</td>
+                        <td>{{orders.4.size}}, {{orders.4.crust}}, {{orders.4.sauce}}</td>
+                        <td>{{#each orders.4.toppings}}<li>{{this}}</li>{{/each}}</td>
+						<td>{{orders.4.createdAt}}</td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
