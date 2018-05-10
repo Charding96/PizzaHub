@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "db_username",
-    "password": "db_username",
+    "username": "jacobmittelstaedt",
+    "password": "jacobmittelstaedt",
     "database": "PizzaHub_development",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   },
   "test": {
-    "username": "db_username",
-    "password": "db_username",
+    "username": "jacobmittelstaedt",
+    "password": "jacobmittelstaedt",
     "database": "PizzaHub_test",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   },
   "production": {
-    "username": "db_username",
-    "password": "db_username",
+    "username": "jacobmittelstaedt",
+    "password": "jacobmittelstaedt",
     "database": "PizzaHub_production",
     "host": "127.0.0.1",
     "dialect": "postgresql"

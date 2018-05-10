@@ -24,8 +24,14 @@ h3{
 }
 
 .hero__content {
+    height: 100%;
   z-index: 101;
   position: relative;
+}
+
+#map {
+  height: 100%;
+    width: 100%;
 }
 
 @-webkit-keyframes slide {
