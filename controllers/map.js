@@ -3,7 +3,9 @@ const models = require('../models');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('map');
+    models.Stores.findAll({}).then((stores) => {
+    res.render('map',{stores});
+    });
 });
 
 //router.post('/', (req, res) => {
