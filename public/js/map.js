@@ -1,18 +1,45 @@
-$(document).on('ready', function() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.async = false;
-    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAQaK60ULN24mFQQF3r57CDg7es9sz4nzw&callback=initMap';
-    
-    var map = new mapTools({
-  id: 'mymap',
-  lat: 41.3833,
-  lng: 2.1833
-}, function (err, map) {
-  if (!err) {
-    console.log('Map Loaded!', map.instance);
-  }
-});
+
+
+
+
+
+
+//$(document).on('ready', function() {
+//    console.log('readying..');
+//    document.addEventListener('DOMContentLoaded', function () {
+//        console.log('dom content loaded listener..');
+//        var js_file = document.createElement('script');
+//        js_file.type = 'text/javascript';
+//        js_file.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAQaK60ULN24mFQQF3r57CDg7es9sz4nzw&callback=initMap';
+//        document.getElementsByTagName('head')[0].appendChild(js_file);
+//    });
+//    
+//    function initMap() {
+//        console.log('init map called');
+//        var map;
+//        map = new google.maps.Map(document.getElementById('map'), {
+//            center: {lat: -34.397, lng: 150.644},
+//            zoom: 8
+//    });
+//}
+//});
+
+//$(document).on('ready', function() {
+//    var script = document.createElement('script');
+//    script.type = 'text/javascript';
+//    script.async = false;
+//    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAQaK60ULN24mFQQF3r57CDg7es9sz4nzw&callback=initMap';
+//    
+//    var map = new mapTools({
+//  id: 'mymap',
+//  lat: 41.3833,
+//  lng: 2.1833
+//}, function (err, map) {
+//  if (!err) {
+//    console.log('Map Loaded!', map.instance);
+//  }
+//});
+//});
     
     
     
@@ -62,4 +89,4 @@ $(document).on('ready', function() {
 //              window.alert('Directions request failed due to ' + status);
 //            }
 //          });
-});
+//});

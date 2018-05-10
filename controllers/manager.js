@@ -4,6 +4,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
      models.Customers.findAll({}).then((customers) => {
+         customers = customers.reverse();
         res.render('manager', {customers});
     })
 });
