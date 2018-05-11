@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
-	const CustomerNotifications = sequelize.define('CustomerNotifications', {
+	const Blacklist = sequelize.define('Blacklist', {
 		firstName: {
 			type: DataTypes.STRING,
 			allowNull: false,
@@ -32,30 +32,9 @@ module.exports = (sequelize, DataTypes) => {
 				notEmpty: true,
 				isEmail: true,
 			},
-		},
-    	accepted: {
-    		type: DataTypes.BOOLEAN
-    	},
-    	customerId: {
-    		type: DataTypes.INTEGER
-    	},
-    	storeId: {
-    		type: DataTypes.INTEGER
-    	}
-	});
-
-	CustomerNotifications.afterUpdate((notification) => {
-		if(notification.accepted === true){
-			models.RegisteredCustomers.create({
-				StoreId: notification.storeId,
-				CustomerId: notification.customerId,
-				VIP: false,
-			}).then(() => {
-				notification.destroy();
-			});
 		}
 	});
 
+	return Blacklist;
 
-	return CustomerNotifications;
 }

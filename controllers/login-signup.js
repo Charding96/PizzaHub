@@ -6,12 +6,12 @@ const redirect = require('../middlewares/redirect');
 const router = express.Router();
 
 router.get('/', 
-	passport.redirectIfLoggedIn('/pizza-order'),
+	passport.redirectIfCustomerLoggedIn('/pizza-order'),
 	(req, res) => {
  		res.render('login-signup', {error: req.flash('error')} );
 });
 
-router.post('/register', passport.redirectIfLoggedIn('/pizza-order'), (req, res) => {
+router.post('/register', passport.redirectIfCustomerLoggedIn('/pizza-order'), (req, res) => {
   req.checkBody('firstName', 'firstName is required').notEmpty();
   req.checkBody('lastName', 'lastName is required').notEmpty();
   req.checkBody('username', 'username is required').notEmpty();
@@ -29,7 +29,7 @@ router.post('/register', passport.redirectIfLoggedIn('/pizza-order'), (req, res)
   		lastName: req.body.lastName,
   		username: req.body.username,
   		email: req.body.email,
-  		password_hash: req.body.password,
+  		password: req.body.password,
   	}).then((customer) => {
   			models.CustomerNotifications.create({
   				firstName: customer.firstName,
@@ -54,7 +54,7 @@ router.post('/register', passport.redirectIfLoggedIn('/pizza-order'), (req, res)
 
 
 router.post('/login', (req, res) => {
-  passport.authenticate('local', {
+  passport.authenticate('customer', {
   	successRedirect: '/pizza-order',
   	failureRedirect: '/login-signup',
   	failureFlash: true,
