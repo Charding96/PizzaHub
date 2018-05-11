@@ -44,29 +44,26 @@ module.exports = (sequelize, DataTypes) => {
 			validate: {
 				notEmpty: true,
 			}
-		},
-		VIP: {
-			type: DataTypes.BOOLEAN,
-			allowNull: false,
-			validate: {
-				notEmpty: true
-			}
-		},
-		ratings: {
-      		type: DataTypes.ARRAY(DataTypes.REAL)
-    	}
+		}
 	})
 
 	Customers.associate = (models) => {
-		models.Customers.belongsToMany(models.Stores, {through: models.RegisteredCustomers});
+		models.Customers.hasMany(models.Orders);
 	}
 
+	Customers.beforeCreate((customer) => 
+		new sequelize.Promise((resolve) => {
+			bcrypt.hash(customer.password, null, null, (err, hashedPassword) => {
+				resolve(hashedPassword);
+			});
+		}).then((hashedPw) => {
+			console.log(hashedPw);
+		  	customer.password_hash = hashedPw;
+		  })
+	);
 
-//Customers.beforeCreate( (customer) => {
 
-//})
+	
 
-
-
-	return Customers
+	return Customers;
 }
