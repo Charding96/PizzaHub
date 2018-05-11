@@ -8,6 +8,11 @@ router.get('/', (req, res) => {
  res.render('homepage');
 });
 
+router.get('/:storeId', (req, res) => {
+    let storeId = req.params.storeId;
+    res.render('homepage',{store: storeId});
+})
+
 router.post('/', (req, res) => {
   res.json({
     msg: "Successful POST to '/' route"
