@@ -3,17 +3,24 @@
 <link rel="stylesheet" href="/css/loginandsignupstyle.css">
   <div class="login-page">
   <div class="form">
-    <form class="register-form" action="/login-signup" method="post">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-	  <input type="text" placeholder="Driver License"/>	
+    {{#each error}}
+      <div class="alert alert-danger"> {{this}} </div>
+    {{/each}}
+    <form class="register-form" action="/login-signup/register" method="post">
+      <input name= "firstName" id="firstName" type="text" placeholder="First Name"/>
+      <input name= "lastName" id="lastName" type="text" placeholder="Last Name"/>
+      <input name= "username" id="username" type="text" placeholder="Username"/>
+      <input name= "email" id="email" type="text" placeholder="email address"/>
+      <input name="password" id="password" type="password" placeholder="password"/>
+      {{#if isDriver}}
+	    <input type="text" placeholder="Driver License"/>	
+      {{/if}}
       <button type="submit">create</button>
       <p class="message">Already registered? <a href="#">Sign In</a></p>
     </form>
-    <form class="login-form" action="/login-signup" method="post">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
+    <form class="login-form" action="/login-signup/login" method="post">
+      <input name="username" id="username" type="text" placeholder="username"/>
+      <input name="password" id="password" type="password" placeholder="password"/>
       <button type="submit">login</button>
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </form>
