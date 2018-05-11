@@ -1,0 +1,43 @@
+
+
+<link rel="stylesheet" href="/css/map.css">
+
+<div>
+    <div class="hero">
+        <div class="hero__content">
+
+            <h3>Directions to the customer</h3>
+            <div id="map">
+                <script>
+            function initMap() {
+//              console.log('hello!');
+              var uluru = {lat: 40.759898, lng: -73.984195};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: uluru
+              });           
+            var directionsService = new google.maps.DirectionsService;
+            var directionsDisplay = new google.maps.DirectionsRenderer;
+            directionsDisplay.setMap(map);
+            directionsService.route({
+              origin: {lat: 40.759898, lng: -73.984195},
+              destination: {lat: 40.759917, lng: -73.980464},
+              travelMode: 'WALKING',
+              provideRouteAlternatives: true},
+              function(response, status) {
+                if (status == 'OK') {
+                  directionsDisplay.setDirections(response);
+                } else {
+                  window.alert('Directions request failed due to ' + status);
+                }
+              });
+            }
+                </script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQaK60ULN24mFQQF3r57CDg7es9sz4nzw&callback=initMap"></script>
+            </div>
+        </div>
+
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    </div>
+    <script  src="/js/map.js"></script>
+</div>

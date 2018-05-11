@@ -4,10 +4,7 @@ const models = require('../models');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    models.Pizzas.findAll({}).then((orders) => {
-        orders = orders.reverse();
-        res.render('cook',{orders});
-    })
+ res.render('assigndriver');
 });
 
 router.post('/', (req, res) => {

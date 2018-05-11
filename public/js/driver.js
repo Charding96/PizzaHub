@@ -1,6 +1,5 @@
-var myIndex;
-function deleteOrder(i){
-    this.myIndex = i.rowIndex;
+function newWindow(){
+    window.open('/mapdriver');
 }
 $(document).ready(function(){
 	// Activate tooltip
@@ -8,8 +7,6 @@ $(document).ready(function(){
 	
 	// Select/Deselect checkboxes
 	var checkbox = $('table tbody input[type="checkbox"]');
-    var list = $('table tbody tr');
-    var table = document.getElementById('myTable');
 	$("#selectAll").click(function(){
 		if(this.checked){
 			checkbox.each(function(){
@@ -21,11 +18,7 @@ $(document).ready(function(){
 			});
 		} 
 	});
-    document.querySelector("#deleteSelected").addEventListener("click",function(e){
-        table.deleteRow(myIndex);
-    });
-	
-    checkbox.click(function(){
+	checkbox.click(function(){
 		if(!this.checked){
 			$("#selectAll").prop("checked", false);
 		}

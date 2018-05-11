@@ -3,10 +3,9 @@ const models = require('../models');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-     models.Customers.findAll({}).then((customers) => {
-         customers = customers.reverse();
-        res.render('manager', {customers});
-    })
+    models.Stores.findAll({}).then((stores) => {
+    res.render('map',{stores});
+    });
 });
 
 //router.post('/', (req, res) => {
@@ -22,5 +21,8 @@ router.get('/', (req, res) => {
 
 
 
-module.exports = router;
 
+
+
+
+module.exports = router;
