@@ -1,3 +1,7 @@
+var myIndex;
+function deleteOrder(i){
+    this.myIndex = i.rowIndex;
+}
 $(document).ready(function(){
 	// Activate tooltip
 	$('[data-toggle="tooltip"]').tooltip();
@@ -18,18 +22,7 @@ $(document).ready(function(){
 		} 
 	});
     document.querySelector("#deleteSelected").addEventListener("click",function(e){
-        for(var i=0;i<table.rows.length;i++){
-            var myCheckbox = document.getElementById(`checkbox${i}`);
-            //console.log(table.rows.length);
-            if(myCheckbox !== null){
-                console.log('got mycheckbox');
-            }
-            if(myCheckbox !== null && myCheckbox.checked === true){
-                console.log(i);
-                table.deleteRow(i);
-                //e.preventDefault();                
-            }
-        }
+        table.deleteRow(myIndex);
     });
 	
     checkbox.click(function(){

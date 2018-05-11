@@ -12,7 +12,18 @@ router.post('/', (req, res) => {
   let total = 0;
   let subtotal = 0;
   const tax = 0.08;
-  let size = parseFloat(req.body.size);
+  let size = req.body.size;
+  let sizePrice = 0;
+  models.Prices.findOne({
+    where:{
+      category: 'size',
+      description: size
+    }
+
+  }).then((price) => {
+    sizePrice = price;
+  })
+
   let sauce = parseFloat(req.body.sauce);
   let crust = parseFloat(req.body.crust);
   let tip = 0;
@@ -53,9 +64,9 @@ router.post('/', (req, res) => {
   let tel = req.body.tel;
   let email = req.body.email;
   let isOrdered = true;
-  subtotal = size + sauce + crust + delivery + options + toppings;
+  subtotal = sizePrice + sauce + crust + delivery + options + toppings;
   total = (subtotal * (1 + tip)) * ( 1 + tax);
-  res.render('pizza-order', {ordered: isOrdered, size: size, subtotal: subtotal, delivery: delivery, total: total, tax: tax, tip: tip, street: street, city: city, zip: zip, message: message, tel: tel, email: email});
+  res.render('pizza-order', {ordered: isOrdered, sizePrice: sizePrice, size: size, subtotal: subtotal, delivery: delivery, total: total, tax: tax, tip: tip, street: street, city: city, zip: zip, message: message, tel: tel, email: email});
   //res.json(crust);
 });
 
