@@ -1,3 +1,6 @@
+function newWindow(){
+    window.open('/mapdriver');
+}
 $(document).ready(function(){
 	// Activate tooltip
 	$('[data-toggle="tooltip"]').tooltip();
