@@ -15,4 +15,5 @@ router.use('/map', require('./map'));
 router.use('/manager', require('./manager'));
 router.use('/driver', require('./driver'));
 router.use('/mapdriver', require('./mapdriver'));
+router.use('/assigndriver', require('./assigndriver'));
 module.exports = router;
