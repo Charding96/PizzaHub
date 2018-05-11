@@ -1,11 +1,13 @@
 const express = require('express');
 const models = require('../models');
+const passport = require('../middlewares/authentication');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
- let isOrdered = false;
- res.render('pizza-order', {ordered: isOrdered});
+router.get('/', 
+  (req, res) => {
+    let isOrdered = false;
+    res.render('pizza-order', {customer: req.customer, ordered: isOrdered});
 });
 
 router.post('/', (req, res) => {
