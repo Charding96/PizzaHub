@@ -5,13 +5,8 @@ const router = express.Router();
 
 
 router.get('/', (req, res) => {
- res.render('homepage');
+ res.render('homepagenew');
 });
-
-router.get('/:storeId', (req, res) => {
-    let storeId = req.params.storeId;
-    res.render('homepage',{store: storeId});
-})
 
 router.post('/', (req, res) => {
   res.json({

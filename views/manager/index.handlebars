@@ -61,7 +61,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr id='row1'>
 						<td>
 							<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox1" name="options[]" value="1">
@@ -73,11 +73,11 @@
 						<td>3.7/5 Stars</td>
                         <td>{{customers.0.createdAt}}</td>
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a onclick="processOrder(row1);" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
+                            <a onclick="deleteOrder(row1);" href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id='row2'>
 						<td>
 							<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox2" name="options[]" value="1">
@@ -89,11 +89,11 @@
 						<td>3.7/5 Stars</td>
                         <td>{{customers.1.createdAt}}</td>
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a onclick="processOrder(row2);" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
+                            <a onclick="deleteOrder(row2);" href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
-					<tr>
+                    <tr id='row3'>
 						<td>
 							<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox3" name="options[]" value="1">
@@ -105,11 +105,11 @@
 						<td>3.7/5 Stars</td>
                         <td>{{customers.2.createdAt}}</td>
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a onclick="processOrder(row3);" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
+                            <a onclick="deleteOrder(row3);" href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id='row4'>
 						<td>
 							<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox4" name="options[]" value="1">
@@ -121,11 +121,11 @@
 						<td>3.7/5 Stars</td>
                         <td>{{customers.3.createdAt}}</td>
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a onclick="processOrder(row4);" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE876;</i></a>
+                            <a onclick="deleteOrder(row4);" href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
-					<tr>
+                    <tr id='row5'>
 						<td>
 							<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox5" name="options[]" value="1">
@@ -137,8 +137,8 @@
 						<td>3.7/5 Stars</td>
                         <td>{{customers.4.createdAt}}</td>
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Accept">&#xE876;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a onclick="processOrder(row5);" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Accept">&#xE876;</i></a>
+                            <a onclick="deleteOrder(row5);" href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
                 </tbody>

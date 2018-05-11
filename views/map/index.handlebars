@@ -12,27 +12,52 @@
             function initMap() {
               console.log('hello!');
               var uluru = {lat: 40.759898, lng: -73.984195};
-              //var uluru = {lat: 41.85, lng: -87.65};
+                var numbers = [];
+                var smallestVals = [];
+                var indices = [];
+                var storeLats = [];
+                var storeLongs = [];
+                {{#each stores}}
+                storeLats.push({{this.latitude}});
+                storeLongs.push({{this.longitude}});
+                numbers.push(Math.sqrt((({{this.latitude}}-uluru.lat) ** 2) + (({{this.longitude}}-uluru.lng) ** 2)));
+                {{/each}}
+                smallestVals.push(Math.min(...numbers));
+                indices.push(numbers.indexOf(smallestVals[0]));
+                numbers.splice(indices[0],1,Infinity);
+                smallestVals.push(Math.min(...numbers));
+                indices.push(numbers.indexOf(smallestVals[1]));
+                numbers.splice(indices[1],1,Infinity);
+                smallestVals.push(Math.min(...numbers));
+                indices.push(numbers.indexOf(smallestVals[2]));
+                numbers.splice(indices[0],1,smallestVals[0]);
+                numbers.splice(indices[1],1,smallestVals[1]);
+                console.log(storeLats[indices[0]]);
               var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 15,
                 center: uluru
               });
               var marker1 = new google.maps.Marker({
-                position: {lat: 40.759898, lng: -73.984195},
+                position: {lat: storeLats[indices[0]], lng: storeLongs[indices[0]]},
                 map: map
               });
               var marker2 = new google.maps.Marker({
-                position: {lat: 40.759917, lng: -73.980464},
+                position: {lat: storeLats[indices[1]], lng: storeLongs[indices[1]]},
                 map: map
               });
               var marker3 = new google.maps.Marker({
-                position: {lat: 40.757872, lng: -73.989344},
+                position: {lat: storeLats[indices[2]], lng: storeLongs[indices[2]]},
                 map: map
               });
               var myClickEvent = function () {
-                //find restaurant and navigate to login page
+                  window.open('www.google.com');
+                  document.location = `/home/{{{stores.1.id}}}`;
               }
               google.maps.event.addListener(marker1,'click',myClickEvent);
+              google.maps.event.addListener(marker2,'click',myClickEvent);
+              google.maps.event.addListener(marker3,'click',myClickEvent);
+                
+                
 //            var directionsService = new google.maps.DirectionsService;
 //            var directionsDisplay = new google.maps.DirectionsRenderer;
 //            directionsDisplay.setMap(map);
