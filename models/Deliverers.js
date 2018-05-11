@@ -53,6 +53,7 @@ module.exports = (sequelize, DataTypes) => {
 
 	Deliverers.associate = (models) => {
 		models.Deliverers.belongsTo(models.Stores);
+		models.Deliverers.hasMany(models.Orders);
 	}
 
 

@@ -54,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
 
 	Cooks.associate = (models) => {
 		models.Cooks.belongsTo(models.Stores);
+		models.Cooks.hasMany(models.Orders);
 	}
 
 	Cooks.beforeCreate( (cook) => {
