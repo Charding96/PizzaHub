@@ -50,8 +50,9 @@
                 map: map
               });
               var myClickEvent = function () {
-                  window.open('www.google.com');
-                  document.location = `/home/{{{stores.1.id}}}`;
+                  //window.open('www.google.com');
+                  //document.location = `/home/{{{stores.1.id}}}`;
+                  document.location = '/login-signup';
               }
               google.maps.event.addListener(marker1,'click',myClickEvent);
               google.maps.event.addListener(marker2,'click',myClickEvent);
